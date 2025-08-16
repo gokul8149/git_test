@@ -10,6 +10,7 @@
             padding: 0;
         }
         body {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -18,6 +19,26 @@
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
             overflow: hidden;
         }
+        .bg-img {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.7;
+        }
+        .animal {
+            left: 10%;
+            bottom: 10%;
+            width: 120px;
+        }
+        .tree {
+            right: 10%;
+            bottom: 15%;
+            width: 100px;
+        }
+        .water {
+            left: 40%;
+            bottom: 0;
+            width: 200px;
+        }
         h1 {
             font-size: 4rem;
             color: #fff;
@@ -25,6 +46,7 @@
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-shadow: 2px 2px 8px #ff6f61, 0 0 20px #fff176;
             animation: rainbow 2s linear infinite;
+            z-index: 1;
         }
         @keyframes rainbow {
             0% { color: #ff6f61; }
@@ -41,6 +63,7 @@
             border-radius: 50%;
             box-shadow: 0 0 30px #fff176;
             animation: bounce 1s infinite alternate;
+            z-index: 1;
         }
         @keyframes bounce {
             to { transform: translateY(-20px); }
@@ -48,6 +71,11 @@
     </style>
 </head>
 <body>
+    <!-- Background images -->
+    <img class="bg-img animal" src="https://pngimg.com/uploads/cat/cat_PNG50550.png" alt="Animal">
+    <img class="bg-img tree" src="https://pngimg.com/uploads/tree/tree_PNG92745.png" alt="Tree">
+    <img class="bg-img water" src="https://pngimg.com/uploads/water/water_PNG33117.png" alt="Waterbody">
+
     <h1 id="welcomeText">Welcome!</h1>
     <img class="smile" src="https://media.giphy.com/media/1BcfiGlOGXzQw/giphy.gif" alt="Smiling GIF">
     <script>
