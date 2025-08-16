@@ -1,0 +1,45 @@
+#diWeatherMain{
+    display: block;
+    border-radius: 10px;
+    width: 400;
+    height: 300;
+    background: black;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0% );
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#weatherWidgectRaw{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+#serchCity{
+    display: contents;
+    color:rgb(8, 8, 8);
+    background: burlywood;
+
+}
+#btnsubmit
+{
+    background: blue;
+}
+#bodysearchcity{
+    display: block;
+    border-radius: 10px;
+    width: 400;
+    height: 300;
+    background: black;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0% );
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#h2{
+    color:darkgrey;
+    text-align: center;
+    font-family: sans-serif;
+}
+#h3
+{
+    color: dimgray;
+    text-align: left;
+}

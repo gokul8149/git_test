@@ -1,0 +1,35 @@
+
+
+ <div id="diWeatherMain">
+  <h2 ID="h2">WEATHER DETAILES OF YOIR CURRENT LOCATION</h2>
+  <div id="weatherWidgectRaw" style="font-size: 32px;margin-top: 5px;">{{weatherData.main.temp}} <sup>o</sup>C</div>
+  <div id="weatherWidgectRaw" style="font-size: 20;">min/max {{weatherData.main.temp_max}}<sup>o</sup>C {{weatherData.main.temp_min}}<sup>o</sup>C</div>
+  <!-- <div id="weatherWidgectRaw">{{weatherData.main.temp_min}}</div> -->
+  <div id="weatherWidgectRaw" style="font-size: 25;">feels like :{{weatherData.main.feels_like}}<sup>o</sup>C</div>
+  <div id="weatherWidgectRaw" style="font-size: 25;"> Location : {{weatherData.sys.country}} / {{weatherData.name}}</div>
+  <!-- <div id="weatherWidgectRaw">{{weatherData.name}}</div> -->
+  <div id="weatherWidgectRaw" style="font-size: 30;">Humidity : {{weatherData.main.humidity}}</div>
+  <div id="weatherWidgectRaw" style="font-size: 25;">Description : {{weatherData.weather[0].description}}</div>
+  <div id="weatherWidgectRaw" style="font-size: 20;">Position : {{weatherData.coord.lon}} long and {{weatherData.coord.lat}} lat</div>
+ </div>
+<!-- <router-outlet></router-outlet> -->
+<div>
+<table>
+  <tr>
+    <td>
+    <button  routerLink="/ExcelData">Download As Excel Data</button> 
+  </td>
+  <td><td></td>
+  <td >
+    <button   routerLink="/SearchCity">Search City</button>
+  </td>
+  </tr>
+  
+</table>
+    
+</div>
+    
+
+
+
+

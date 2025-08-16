@@ -1,0 +1,37 @@
+<div id="serchCity">
+    <h2 ID="h3">find weather data in all over the world</h2>
+    <form form='ngForm' (ngSubmit)="getCityName()">
+      <table>
+        <tr>
+          <td>city name</td>
+          <td>
+            <input type="text" class="form-control" name="cityName" required #cityName="ngModel" [(ngModel)]="city.cityName">
+            <sub *ngIf="cityName.errors?.required&&isSubmitted" style="color:red"> Enter city name</sub>
+          </td>
+        </tr>
+        <br>
+        <input id="btnsubmit" type="submit"  style="color: chartreuse; box-sizing: content-box;" value="Search for Data">
+      </table>
+    </form>
+  <div>
+    <div id="bodysearchcity" *ngIf="cityName.value">
+      <h2 ID="h2">WEATHER DETAILES OF  {{ weatherDataCity.name}}</h2>
+      <div id="weatherWidgectRaw" style ="font-size: 32px;margin-top: 5px;">{{weatherDataCity.main.temp}} <sup>o</sup>C</div>
+      <div id="weatherWidgectRaw" style="font-size: 20;">min/max {{weatherDataCity.main.temp_max}}<sup>o</sup>C {{weatherDataCity.main.temp_min}}<sup>o</sup>C</div>
+      <!-- <div id="weatherWidgectRaw">{{weatherData.main.temp_min}}</div> -->
+      <div id="weatherWidgectRaw" style="font-size: 25;">feels like : {{weatherDataCity.main.feels_like}} <sup>o</sup>C</div>
+      <div id="weatherWidgectRaw" style="font-size: 25;"> Location : {{weatherDataCity.sys.country}} / {{weatherDataCity.name}}</div>
+      <!-- <div id="weatherWidgectRaw">{{weatherData.name}}</div> -->
+      <div id="weatherWidgectRaw" style="font-size: 30;">humidity : {{weatherDataCity.main.humidity}}</div>
+      <div id="weatherWidgectRaw" style="font-size: 25;">Description : {{weatherDataCity.weather[0].description}}</div>
+      <div id="weatherWidgectRaw" style="font-size: 20;"> position : {{weatherDataCity.coord.lon}} long and {{weatherDataCity.coord.lat}} lat</div>
+     
+      </div>  
+    </div>
+</div>
+<div *ngIf=isvalue>
+    <br>
+     <button id="serchcity "routerLink="/ExcelDataCityName">Download As Excel</button>     
+</div>
+   
+   
