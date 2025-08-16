@@ -11,19 +11,59 @@
         }
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #f5f5f5;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            overflow: hidden;
         }
         h1 {
             font-size: 4rem;
-            color: #333;
+            color: #fff;
             margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-shadow: 2px 2px 8px #ff6f61, 0 0 20px #fff176;
+            animation: rainbow 2s linear infinite;
+        }
+        @keyframes rainbow {
+            0% { color: #ff6f61; }
+            20% { color: #ffeb3b; }
+            40% { color: #4caf50; }
+            60% { color: #2196f3; }
+            80% { color: #9c27b0; }
+            100% { color: #ff6f61; }
+        }
+        .smile {
+            margin-top: 30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px #fff176;
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            to { transform: translateY(-20px); }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h1 id="welcomeText">Welcome!</h1>
+    <img class="smile" src="https://media.giphy.com/media/1BcfiGlOGXzQw/giphy.gif" alt="Smiling GIF">
+    <script>
+        // Fun JS: Change text on click
+        const texts = [
+            "Welcome!",
+            "Hello, Friend!",
+            "Smile & Shine!",
+            "Have a Great Day!",
+            "Enjoy Coding!"
+        ];
+        let idx = 0;
+        document.getElementById('welcomeText').onclick = function() {
+            idx = (idx + 1) % texts.length;
+            this.textContent = texts[idx];
+        };
+    </script>
 </body>
 </html>
